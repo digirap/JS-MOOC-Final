@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    initializeImageDisplay();
-    
+    //initializeImageDisplay();
+
 });
 
 function addTabindexToImages() {
@@ -19,13 +19,13 @@ function addTabindexToImages() {
     }
 }
 
-function initializeImageDisplay() { 
+/* function initializeImageDisplay() { 
     const imageDisplay = document.getElementById('image'); 
     imageDisplay.style.backgroundImage = ''; 
     imageDisplay.innerHTML = 'Hover over an image below to display here.'; 
     console.log('Page loaded: Default message displayed');
 }
-
+ */
 function imageLoaded(previewPic) { 
     //console.log(`Image loaded: ${previewPic.alt}`;)
     const imageDisplay = document.getElementById ('image');
