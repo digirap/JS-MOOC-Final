@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     addTabindexToImages();
+    initializeImageDisplay();
+    const images = document.querySelectorAll('.preview'); 
+    
+    for (let img of images) {
+        img.addEventListener('load', function() { 
+            console.log(`Image loaded: ${img.alt}`); 
+        });
+    }
 });
 
 function addTabindexToImages() {
@@ -7,6 +15,13 @@ function addTabindexToImages() {
     for (let img of images) {
         img.setAttribute('tabindex', '0');
     }
+}
+
+function initializeImageDisplay() { 
+    const imageDisplay = document.getElementById('image'); 
+    imageDisplay.style.backgroundImage = ''; 
+    imageDisplay.innerHTML = 'Hover over an image below to display here.'; 
+    console.log('Page loaded: Default message displayed');
 }
 
 function imageLoaded(previewPic) { 
