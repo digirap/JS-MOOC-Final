@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     addTabindexToImages();
-    initializeImageDisplay();
     const images = document.querySelectorAll('.preview'); 
     
     for (let img of images) {
@@ -8,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(`Image loaded: ${img.alt}`); 
         });
     }
+    
+    initializeImageDisplay();
+    
 });
 
 function addTabindexToImages() {
